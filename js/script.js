@@ -4,6 +4,8 @@ var snake = {
 	current_snake: [[20, 20]]
 }
 
+var gameSpeed = 250;
+
 function createGrid() {
 	var grid = [];
 
@@ -73,25 +75,33 @@ function move() {
 }	
 
 function gameOver() {
-	return false;
+	if (snake.current_snake[0][0] > 39 || snake.current_snake[0][0] < 0 ||
+			snake.current_snake[0][1] > 39 || snake.current_snake[0][1] < 0) {
+		alert("Game Over");
+		return true;
+	} else {
+		return false;
+	}
 }
 
 function gameLoop() {
 	setTimeout(function run() {
+		move();
+
 		if (gameOver() === false) {
-			move()
 			gameLoop();
 		}
-	}, 250);
+	}, gameSpeed);
 
 }
 
 $(function() {
 	render();
-	
+	gameLoop();
+
   $("html").on("keyup", function(e) {
     console.log(e);
-    gameLoop();
+    
     e.preventDefault();
     parseKey(e.keyCode);
   })
