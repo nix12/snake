@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+* {
+  box-sizing: border-box; }
+
+.snake-grid {
+  width: 502px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.square {
+  height: 12.5px;
+  width: 12.5px;
+  border: 1px solid black; }
+
+/*# sourceMappingURL=style.css.map */
