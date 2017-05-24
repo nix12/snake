@@ -19,6 +19,24 @@ body {
 .square {
 	height: 12.5px;
 	width: 12.5px;
-	// margin: 0.2px;
 	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.snake {
+	background-color: yellow;
+	
+	&:after {
+		content: "O";
+	}
+}
+
+.food {
+	background-color: red;
+	
+	&:after {
+		content: "x";
+	}
 }

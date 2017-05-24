@@ -16,6 +16,19 @@ body {
 .square {
   height: 12.5px;
   width: 12.5px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.snake {
+  background-color: yellow; }
+  .snake:after {
+    content: "O"; }
+
+.food {
+  background-color: red; }
+  .food:after {
+    content: "x"; }
 
 /*# sourceMappingURL=style.css.map */
